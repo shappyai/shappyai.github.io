@@ -259,6 +259,10 @@ h3 {
   border-block: 1px solid var(--line);
 }
 
+.seo-section {
+  padding-top: 46px;
+}
+
 .section-inner {
   max-width: 1180px;
   margin: 0 auto;
@@ -329,6 +333,24 @@ h3 {
 .feature-card:nth-child(3) .feature-icon {
   background: #eef4ff;
   color: #245a8a;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.info-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.info-card p {
+  margin: 12px 0 0;
+  color: var(--muted);
 }
 
 .feature-figure {
@@ -527,6 +549,7 @@ h3 {
 
   .feature-strip,
   .feature-grid,
+  .info-grid,
   .steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -555,6 +578,7 @@ h3 {
   .hero-facts,
   .feature-strip,
   .feature-grid,
+  .info-grid,
   .steps {
     grid-template-columns: 1fr;
   }
