@@ -83,11 +83,11 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.88fr);
   align-items: center;
   gap: 44px;
   max-width: 1180px;
-  min-height: calc(100vh - 64px);
+  min-height: 680px;
   margin: 0 auto;
   padding: 68px 24px 42px;
 }
@@ -187,27 +187,27 @@ h3 {
 
 .phone-showcase {
   position: relative;
-  min-height: 670px;
+  min-height: 520px;
 }
 
 .phone {
   position: absolute;
   display: block;
-  width: min(42vw, 330px);
-  border: 10px solid #2b3035;
-  border-radius: 34px;
+  width: min(31vw, 250px);
+  border: 8px solid #2b3035;
+  border-radius: 28px;
   background: #2b3035;
   box-shadow: var(--shadow);
 }
 
 .phone-back {
   right: 0;
-  top: 54px;
+  top: 46px;
   transform: rotate(5deg);
 }
 
 .phone-front {
-  left: 24px;
+  left: 32px;
   top: 0;
   z-index: 2;
   transform: rotate(-4deg);
@@ -216,14 +216,14 @@ h3 {
 .mascot {
   position: absolute;
   z-index: 3;
-  width: 142px;
+  width: 112px;
   height: auto;
   filter: drop-shadow(0 14px 20px rgba(32, 37, 43, 0.18));
 }
 
 .mascot-perfect {
-  right: 6px;
-  bottom: 42px;
+  right: 18px;
+  bottom: 70px;
 }
 
 .feature-strip {
@@ -344,16 +344,18 @@ h3 {
 }
 
 .screenshot-rail {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(210px, 1fr));
-  gap: 16px;
+  display: flex;
+  gap: 18px;
   align-items: start;
   overflow-x: auto;
-  padding: 8px 2px 22px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 8px 8px 26px;
   scroll-snap-type: x mandatory;
 }
 
 .screenshot-card {
+  flex: 0 0 clamp(168px, 19vw, 230px);
   scroll-snap-align: start;
   margin: 0;
 }
@@ -361,15 +363,16 @@ h3 {
 .screenshot-card img {
   display: block;
   width: 100%;
-  border: 8px solid #252b30;
-  border-radius: 28px;
+  border: 6px solid #252b30;
+  border-radius: 24px;
   background: #252b30;
-  box-shadow: 0 20px 36px rgba(32, 37, 43, 0.16);
+  box-shadow: 0 16px 28px rgba(32, 37, 43, 0.14);
 }
 
 .screenshot-card figcaption {
   margin-top: 12px;
   color: var(--text);
+  font-size: 0.92rem;
   font-weight: 850;
   text-align: center;
 }
@@ -497,11 +500,11 @@ h3 {
   }
 
   .phone-showcase {
-    min-height: 590px;
+    min-height: 480px;
   }
 
   .phone {
-    width: min(58vw, 320px);
+    width: min(42vw, 230px);
   }
 
   .feature-strip,
@@ -526,11 +529,11 @@ h3 {
   }
 
   .phone-showcase {
-    min-height: 500px;
+    min-height: 430px;
   }
 
   .phone {
-    width: min(72vw, 280px);
+    width: min(54vw, 215px);
     border-width: 7px;
     border-radius: 26px;
   }
@@ -545,12 +548,12 @@ h3 {
   }
 
   .mascot-perfect {
-    width: 104px;
-    bottom: 20px;
+    width: 88px;
+    bottom: 46px;
   }
 
-  .screenshot-rail {
-    grid-template-columns: repeat(6, minmax(190px, 74vw));
+  .screenshot-card {
+    flex-basis: min(58vw, 220px);
   }
 
   .closing-mascot {
