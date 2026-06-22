@@ -357,6 +357,55 @@ h3 {
   color: var(--muted);
 }
 
+.faq-section {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 248, 237, 0.9)),
+    var(--bg);
+  border-top: 1px solid var(--line);
+}
+
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  position: relative;
+  min-height: 170px;
+  padding: 22px 22px 22px 68px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 12px 24px rgba(32, 37, 43, 0.06);
+}
+
+.faq-item::before {
+  content: "Q";
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 999px;
+  background: #e7f5ef;
+  color: var(--brand-strong);
+  font-weight: 900;
+}
+
+.faq-item h3 {
+  font-size: 1.05rem;
+}
+
+.faq-item p {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
 .feature-figure {
   margin: 0;
 }
@@ -554,6 +603,7 @@ h3 {
   .feature-strip,
   .feature-grid,
   .info-grid,
+  .faq-list,
   .steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -587,8 +637,19 @@ h3 {
   .feature-strip,
   .feature-grid,
   .info-grid,
+  .faq-list,
   .steps {
     grid-template-columns: 1fr;
+  }
+
+  .faq-item {
+    min-height: 0;
+    padding: 18px 18px 18px 58px;
+  }
+
+  .faq-item::before {
+    top: 18px;
+    left: 18px;
   }
 
   .phone-showcase {
