@@ -336,6 +336,9 @@ h3 {
 .feature-figure img {
   display: block;
   width: 100%;
+  height: auto;
+  aspect-ratio: 1024 / 500;
+  object-fit: contain;
   border-radius: 8px;
   box-shadow: var(--shadow);
 }
