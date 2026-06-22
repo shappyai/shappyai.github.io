@@ -389,6 +389,10 @@ h3 {
   box-shadow: 0 12px 26px rgba(32, 37, 43, 0.07);
 }
 
+.faq-item[open] {
+  background: rgba(255, 255, 255, 0.92);
+}
+
 .faq-item::before {
   content: "Q";
   position: absolute;
@@ -399,15 +403,43 @@ h3 {
   height: 32px;
   place-items: center;
   border-radius: 999px;
-  background: #e7f5ef;
-  color: var(--brand-strong);
+  background: linear-gradient(135deg, #1687ff, #26c66f);
+  color: #ffffff;
   font-weight: 900;
+  box-shadow: 0 8px 16px rgba(22, 131, 109, 0.2);
 }
 
-.faq-item h3 {
-  margin: 0 0 10px;
+.faq-item summary {
+  display: block;
+  margin: 0;
+  padding-right: 30px;
+  cursor: pointer;
   font-size: 1.08rem;
+  font-weight: 850;
   line-height: 1.5;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  color: var(--brand-strong);
+  font-size: 1.35rem;
+  font-weight: 850;
+}
+
+.faq-item[open] summary::after {
+  content: "-";
+}
+
+.faq-item[open] summary {
+  margin-bottom: 10px;
 }
 
 .faq-item p {
@@ -667,6 +699,16 @@ h3 {
   .faq-item::before {
     top: 18px;
     left: 16px;
+  }
+
+  .faq-item summary {
+    padding-right: 28px;
+    font-size: 1rem;
+  }
+
+  .faq-item summary::after {
+    top: 16px;
+    right: 16px;
   }
 
   .phone-showcase {
