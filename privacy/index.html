@@ -1,140 +1,112 @@
 <!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>プライバシーポリシー | ShappyAI</title>
-  <meta name="description" content="ShappyAIのプライバシーポリシーです。">
-  <link rel="stylesheet" href="../styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="../">ShappyAI</a>
-      <div class="links">
-        <a href="../terms/">利用規約</a>
-        <a href="../privacy/">プライバシーポリシー</a>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>プライバシーポリシー | ShappyAI</title>
+    <meta name="description" content="ShappyAIのプライバシーポリシーです。">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="メインナビゲーション">
+        <a class="brand" href="../">
+          <img src="../assets/icon_512x512.png" width="38" height="38" alt="">
+          <span>ShappyAI</span>
+        </a>
+        <div class="nav-links">
+          <a href="../">トップ</a>
+          <a href="../terms/">terms</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="doc">
+      <header>
+        <p class="eyebrow">施行日: 2026年6月10日</p>
+        <h1>プライバシーポリシー</h1>
+        <p>ShappyAIは、英語シャドーイング練習を提供するために必要な範囲でデータを取り扱います。本ポリシーは、本アプリが収集、送信、利用、共有するデータと、その目的を説明します。</p>
+      </header>
+
+      <section>
+        <h2>1. 基本方針</h2>
+        <p>ShappyAIは、英語シャドーイング練習を提供するために必要な範囲でデータを取り扱います。</p>
+      </section>
+      <section>
+        <h2>2. 収集・処理するデータ</h2>
+        <table>
+          <thead>
+            <tr><th>データ</th><th>取り扱い</th><th>目的</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>MP3音声</td><td>端末内保存。AI文字起こし時に一時送信</td><td>教材管理、AI文字起こし</td></tr>
+            <tr><td>録音音声</td><td>判定時に一時作成・一時送信。判定後に端末から削除</td><td>AI判定</td></tr>
+            <tr><td>文字起こし</td><td>端末内保存。判定時に一時送信</td><td>練習、AI判定</td></tr>
+            <tr><td>編集済みスクリプト</td><td>端末内保存。判定時に一時送信</td><td>練習、AI判定</td></tr>
+            <tr><td>判定結果・学習履歴</td><td>端末内保存</td><td>学習履歴表示、進捗表示</td></tr>
+            <tr><td>匿名インストールID</td><td>端末内保存。Cloud Functionsへ送信</td><td>利用上限、不正利用対策</td></tr>
+            <tr><td>IPアドレス</td><td>Cloud Functions実行環境で処理される場合あり</td><td>不正利用対策、ログ</td></tr>
+            <tr><td>広告ID・端末情報等</td><td>Google Mobile Ads SDKが扱う場合あり</td><td>広告表示、測定、不正防止</td></tr>
+            <tr><td>クラッシュ情報・診断情報</td><td>Firebase Crashlyticsが収集する場合あり</td><td>不具合調査、品質改善</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>3. 外部送信・共有先</h2>
+        <p>本アプリは、Firebase Cloud Functions、Firebase Storage、Firebase App Check / Play Integrity、Firebase Crashlytics、OpenAI API、Google Mobile Ads / AdMobを利用します。</p>
+        <p>AI文字起こしとAI判定では、処理に必要な音声や関連テキストをCloud Functions経由でOpenAI APIへ送信します。広告表示では、Google Mobile Ads SDKが広告配信、測定、不正防止のためにデータを処理する場合があります。クラッシュ解析では、Firebase Crashlyticsがクラッシュ、ANR、非致命的エラーなどの診断情報を処理する場合があります。</p>
+      </section>
+      <section>
+        <h2>4. 保存期間</h2>
+        <p>MP3、文字起こし、編集済みスクリプト、判定結果、学習履歴は、利用者が削除するまで端末内に保存されます。利用者は、設定画面から端末内データを削除できます。</p>
+        <p>AI処理のためにFirebase Storageへ一時アップロードされた音声ファイルは、処理後に削除されます。削除に失敗した一時ファイルは、定期削除処理の対象になります。</p>
+      </section>
+      <section>
+        <h2>5. クラウド保存・ログイン・課金</h2>
+        <p>Ver1では、ログイン、課金、クラウド保存、端末間同期は提供しません。ただし、AI処理のための一時アップロード、広告配信、クラッシュ解析、不正利用対策のために外部サービスへデータが送信されることがあります。</p>
+      </section>
+      <section>
+        <h2>6. 広告と同意</h2>
+        <p>本アプリは広告を表示します。広告配信にはGoogle AdMobを使用します。EEA、UK、スイスなど、同意が必要な地域では、Google認定CMPまたはAdMobのPrivacy & messagingを通じた同意フォームが表示される場合があります。利用者は、対象地域では設定画面からプライバシー選択を開ける場合があります。</p>
+      </section>
+      <section>
+        <h2>7. マイク権限</h2>
+        <p>本アプリは、シャドーイング録音のためにマイク権限を使用します。マイクは録音機能を利用する場合に使用されます。録音データはAI判定のために一時的に利用され、判定後に端末から削除されます。</p>
+      </section>
+      <section>
+        <h2>8. 利用者の操作による削除</h2>
+        <p>利用者は、設定画面から端末内データを削除できます。削除対象には、MP3、文字起こし、編集済みスクリプト、判定結果、学習履歴、利用回数が含まれます。</p>
+      </section>
+      <section>
+        <h2>9. 子ども向けではないこと</h2>
+        <p>本アプリは、子ども向けアプリとして提供するものではありません。対象年齢は13歳以上とし、子ども向けアプリとして提供するものではありません。対象地域と広告設定は、Google Play、AdMob、アプリ内表示、Data safety申告と一致させます。</p>
+      </section>
+      <section>
+        <h2>10. セキュリティ</h2>
+        <p>OpenAI APIキーはAndroidアプリに含めず、Cloud Functions側で管理します。Cloud FunctionsではApp Checkなどを利用し、不正利用を抑制します。ただし、通信や保存の安全性を完全に保証するものではありません。</p>
+      </section>
+      <section>
+        <h2>11. ポリシーの変更</h2>
+        <p>本ポリシーは、機能追加、外部サービス変更、法令・ポリシー変更に応じて更新することがあります。重要な変更がある場合は、アプリ内または公開ページで通知します。</p>
+      </section>
+      <section>
+        <h2>12. Data safety</h2>
+        <p>Google PlayのData safety申告は、本ポリシー、アプリ内表示、実際のデータ処理と一致させます。</p>
+      </section>
+      <section>
+        <h2>13. 問い合わせ</h2>
+        <p>本ポリシーに関する問い合わせ先は、<a href="mailto:shappyai@outlook.com">shappyai@outlook.com</a> とします。</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>&copy; 2026 Shappy Studio</div>
+        <div class="nav-links">
+          <a href="../terms/">利用規約</a>
+          <a href="../app-ads.txt">app-ads.txt</a>
+        </div>
       </div>
-    </nav>
-  </header>
-
-  <main>
-    <article class="doc">
-      <h1>プライバシーポリシー</h1>
-      <p class="meta">制定日: 2026年6月10日 / 開発者: Shappy Studio / 連絡先: shappyai@outlook.com</p>
-
-      <h2>1. 基本方針</h2>
-      <p>ShappyAIは、英語シャドーイング練習を提供するために必要な範囲でデータを取り扱います。本ポリシーは、本アプリが収集、送信、利用、共有するデータと、その目的を説明します。</p>
-
-      <h2>2. 収集・処理するデータ</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>データ</th>
-            <th>取り扱い</th>
-            <th>目的</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>MP3音声</td>
-            <td>端末内保存。AI文字起こし時に一時送信</td>
-            <td>教材管理、AI文字起こし</td>
-          </tr>
-          <tr>
-            <td>録音音声</td>
-            <td>判定時に一時作成・一時送信。判定後に端末から削除</td>
-            <td>AI判定</td>
-          </tr>
-          <tr>
-            <td>文字起こし</td>
-            <td>端末内保存。判定時に一時送信</td>
-            <td>練習、AI判定</td>
-          </tr>
-          <tr>
-            <td>編集済みスクリプト</td>
-            <td>端末内保存。判定時に一時送信</td>
-            <td>練習、AI判定</td>
-          </tr>
-          <tr>
-            <td>判定結果</td>
-            <td>端末内保存</td>
-            <td>学習履歴表示</td>
-          </tr>
-          <tr>
-            <td>学習履歴</td>
-            <td>端末内保存</td>
-            <td>進捗表示</td>
-          </tr>
-          <tr>
-            <td>匿名インストールID</td>
-            <td>端末内保存。Cloud Functionsへ送信</td>
-            <td>利用上限、不正利用対策</td>
-          </tr>
-          <tr>
-            <td>IPアドレス</td>
-            <td>Cloud Functions実行環境で処理される場合あり</td>
-            <td>不正利用対策、ログ</td>
-          </tr>
-          <tr>
-            <td>広告ID・端末情報等</td>
-            <td>Google Mobile Ads SDKが扱う場合あり</td>
-            <td>広告表示、測定、不正防止</td>
-          </tr>
-          <tr>
-            <td>クラッシュ情報・診断情報</td>
-            <td>Firebase Crashlyticsが収集する場合あり</td>
-            <td>不具合調査、品質改善</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>3. 外部送信・共有先</h2>
-      <p>本アプリは、以下の外部サービスを利用します。</p>
-      <ul>
-        <li>Firebase Cloud Functions</li>
-        <li>Firebase Storage</li>
-        <li>Firebase App Check / Play Integrity</li>
-        <li>Firebase Crashlytics</li>
-        <li>OpenAI API</li>
-        <li>Google Mobile Ads / AdMob</li>
-      </ul>
-      <p>AI文字起こしとAI判定では、処理に必要な音声や関連テキストをCloud Functions経由でOpenAI APIへ送信します。広告表示では、Google Mobile Ads SDKが広告配信、測定、不正防止のためにデータを処理する場合があります。クラッシュ解析では、Firebase Crashlyticsがクラッシュ、ANR、非致命的エラーなどの診断情報を処理する場合があります。</p>
-
-      <h2>4. 保存期間</h2>
-      <p>MP3、文字起こし、編集済みスクリプト、判定結果、学習履歴は、利用者が削除するまで端末内に保存されます。利用者は、設定画面から端末内データを削除できます。</p>
-      <p>AI処理のためにFirebase Storageへ一時アップロードされた音声ファイルは、処理後に削除されます。削除に失敗した一時ファイルは、定期削除処理の対象になります。</p>
-
-      <h2>5. クラウド保存・ログイン・課金</h2>
-      <p>Ver1では、ログイン、課金、クラウド保存、端末間同期は提供しません。ただし、AI処理のための一時アップロード、広告配信、クラッシュ解析、不正利用対策のために外部サービスへデータが送信されることがあります。</p>
-
-      <h2>6. 広告と同意</h2>
-      <p>本アプリは広告を表示します。広告配信にはGoogle AdMobを使用します。EEA、UK、スイスなど、同意が必要な地域では、Google認定CMPまたはAdMobのPrivacy & messagingを通じた同意フォームが表示される場合があります。利用者は、対象地域では設定画面からプライバシー選択を開ける場合があります。</p>
-
-      <h2>7. マイク権限</h2>
-      <p>本アプリは、シャドーイング録音のためにマイク権限を使用します。マイクは録音機能を利用する場合に使用されます。録音データはAI判定のために一時的に利用され、判定後に端末から削除されます。</p>
-
-      <h2>8. 利用者の操作による削除</h2>
-      <p>利用者は、設定画面から端末内データを削除できます。削除対象には、MP3、文字起こし、編集済みスクリプト、判定結果、学習履歴、利用回数が含まれます。</p>
-
-      <h2>9. 子ども向けではないこと</h2>
-      <p>本アプリは、子ども向けアプリとして提供するものではありません。対象年齢は13歳以上とし、対象地域と広告設定は、Google Play、AdMob、アプリ内表示、Data safety申告と一致させます。</p>
-
-      <h2>10. セキュリティ</h2>
-      <p>OpenAI APIキーはAndroidアプリに含めず、Cloud Functions側で管理します。Cloud FunctionsではApp Checkなどを利用し、不正利用を抑制します。ただし、通信や保存の安全性を完全に保証するものではありません。</p>
-
-      <h2>11. ポリシーの変更</h2>
-      <p>本ポリシーは、機能追加、外部サービス変更、法令・ポリシー変更に応じて更新することがあります。重要な変更がある場合は、アプリ内または公開ページで通知します。</p>
-
-      <h2>12. 問い合わせ</h2>
-      <p>本ポリシーに関する問い合わせ先は、shappyai@outlook.com とします。</p>
-    </article>
-  </main>
-
-  <footer class="site-footer">
-    <div>
-      <span>&copy; 2026 Shappy Studio</span>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
