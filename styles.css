@@ -364,22 +364,29 @@ h3 {
   border-top: 1px solid var(--line);
 }
 
+.faq-section .section-inner {
+  max-width: 900px;
+  padding-inline: 24px;
+}
+
+.faq-section .section-title {
+  margin-bottom: 22px;
+}
+
 .faq-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  max-width: 980px;
+  gap: 18px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .faq-item {
   position: relative;
-  min-height: 170px;
-  padding: 22px 22px 22px 68px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.86);
-  box-shadow: 0 12px 24px rgba(32, 37, 43, 0.06);
+  padding: 22px 24px 22px 72px;
+  border: 1px solid rgba(32, 37, 43, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 26px rgba(32, 37, 43, 0.07);
 }
 
 .faq-item::before {
@@ -398,12 +405,15 @@ h3 {
 }
 
 .faq-item h3 {
-  font-size: 1.05rem;
+  margin: 0 0 10px;
+  font-size: 1.08rem;
+  line-height: 1.5;
 }
 
 .faq-item p {
-  margin: 10px 0 0;
-  color: var(--muted);
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.8;
 }
 
 .feature-figure {
@@ -603,7 +613,6 @@ h3 {
   .feature-strip,
   .feature-grid,
   .info-grid,
-  .faq-list,
   .steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -633,6 +642,14 @@ h3 {
     font-size: clamp(1.45rem, 7vw, 2.1rem);
   }
 
+  .faq-section .section-inner {
+    padding-inline: 16px;
+  }
+
+  .faq-section .section-title h2 {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
   .hero-facts,
   .feature-strip,
   .feature-grid,
@@ -643,13 +660,13 @@ h3 {
   }
 
   .faq-item {
-    min-height: 0;
-    padding: 18px 18px 18px 58px;
+    padding: 18px 16px 18px 58px;
+    border-radius: 14px;
   }
 
   .faq-item::before {
     top: 18px;
-    left: 18px;
+    left: 16px;
   }
 
   .phone-showcase {
