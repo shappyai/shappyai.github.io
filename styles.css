@@ -66,8 +66,10 @@ a {
 
 .brand img {
   display: block;
-  width: 142px;
+  width: 180px;
+  max-height: 48px;
   height: auto;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -538,7 +540,8 @@ h3 {
   }
 
   .brand img {
-    width: 128px;
+    width: 150px;
+    max-height: 42px;
   }
 
   .doc h1 {
