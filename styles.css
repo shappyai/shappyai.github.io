@@ -392,6 +392,15 @@ h3 {
   box-shadow: 0 18px 38px rgba(32, 37, 43, 0.08);
 }
 
+.comparison-col-item {
+  width: 22%;
+}
+
+.comparison-col-shappy,
+.comparison-col-other {
+  width: 26%;
+}
+
 .comparison-table th,
 .comparison-table td {
   padding: 16px 14px;
@@ -435,6 +444,11 @@ h3 {
   background: #e7f5ef;
   color: var(--brand-strong);
   font-weight: 850;
+}
+
+.comparison-table thead .is-shappy {
+  background: var(--brand);
+  color: #ffffff;
 }
 
 .comparison-mark {
@@ -917,28 +931,37 @@ h3 {
     border-radius: 8px;
   }
 
+  .comparison-col-item {
+    width: 22%;
+  }
+
+  .comparison-col-shappy,
+  .comparison-col-other {
+    width: 26%;
+  }
+
   .comparison-table th,
   .comparison-table td {
-    padding: 10px 7px;
-    font-size: 0.72rem;
-    line-height: 1.45;
-    word-break: keep-all;
+    padding: 9px 5px;
+    font-size: 0.66rem;
+    line-height: 1.35;
+    word-break: normal;
     overflow-wrap: anywhere;
   }
 
   .comparison-table thead th {
-    font-size: 0.68rem;
+    font-size: 0.61rem;
   }
 
   .comparison-table tbody th {
     width: auto;
-    font-size: 0.74rem;
+    font-size: 0.67rem;
   }
 
   .comparison-mark {
     display: grid;
     margin: 0 0 4px;
-    font-size: 0.95rem;
+    font-size: 0.82rem;
   }
 
   .comparison-note {
