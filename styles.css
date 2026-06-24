@@ -735,11 +735,27 @@ h3 {
   .nav {
     padding-inline: 16px;
     gap: 12px;
+    overflow: hidden;
   }
 
-  .nav-links {
-    gap: 12px 16px;
-    font-size: 0.9rem;
+  .nav .nav-links {
+    flex-wrap: nowrap;
+    gap: 14px;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    font-size: 0.88rem;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav .nav-links a {
+    flex: 0 0 auto;
   }
 
   .hero {
