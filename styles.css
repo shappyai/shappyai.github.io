@@ -178,6 +178,7 @@ h3 {
   width: min(214px, 100%);
   border-radius: 7px;
   box-shadow: 0 14px 24px rgba(32, 37, 43, 0.14);
+  text-decoration: none;
 }
 
 .play-badge img {

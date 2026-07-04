@@ -165,10 +165,10 @@
             <a class="button primary" href="#screenshots">画面を見る</a>
             <a class="button secondary" href="privacy/">プライバシーポリシー</a>
           </div>
-          <div class="play-badge play-badge-hero" aria-label="Google Playで7月中公開予定">
+          <a class="play-badge play-badge-hero" href="https://play.google.com/store/games?hl=ja&amp;pli=1" target="_blank" rel="noopener noreferrer" data-play-store-location="hero" aria-label="Google Playで7月中公開予定">
             <img src="assets/GetItOnGooglePlay.png" width="270" height="80" alt="Google Playで手に入れよう">
             <span>7月中公開予定</span>
-          </div>
+          </a>
           <dl class="hero-facts" aria-label="ShappyAIの特徴">
             <div><dt>価格</dt><dd>無料</dd></div>
             <div><dt>保存</dt><dd>端末内中心</dd></div>
@@ -375,10 +375,10 @@
             </figure>
           </div>
           <div class="play-badge-row">
-            <div class="play-badge" aria-label="Google Playで7月中公開予定">
+            <a class="play-badge" href="https://play.google.com/store/games?hl=ja&amp;pli=1" target="_blank" rel="noopener noreferrer" data-play-store-location="screenshots" aria-label="Google Playで7月中公開予定">
               <img src="assets/GetItOnGooglePlay.png" width="270" height="80" alt="Google Playで手に入れよう">
               <span>7月中公開予定</span>
-            </div>
+            </a>
           </div>
         </div>
       </section>
@@ -398,10 +398,10 @@
               <div class="step">録音してAI判定を確認</div>
             </div>
             <p class="note">AI文字起こしとAI判定には1日あたりの利用上限があります。広告表示にはGoogle AdMobを使用します。</p>
-            <div class="play-badge play-badge-closing" aria-label="Google Playで7月中公開予定">
+            <a class="play-badge play-badge-closing" href="https://play.google.com/store/games?hl=ja&amp;pli=1" target="_blank" rel="noopener noreferrer" data-play-store-location="footer" aria-label="Google Playで7月中公開予定">
               <img src="assets/GetItOnGooglePlay.png" width="270" height="80" alt="Google Playで手に入れよう">
               <span>7月中公開予定</span>
-            </div>
+            </a>
           </div>
         </div>
       </section>
@@ -578,5 +578,16 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.querySelectorAll('[data-play-store-location]').forEach((link) => {
+        link.addEventListener('click', () => {
+          if (typeof gtag === 'function') {
+            gtag('event', 'click_play_store', {
+              location: link.dataset.playStoreLocation
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>
