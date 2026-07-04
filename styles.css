@@ -479,11 +479,10 @@ h3 {
 }
 
 .comparison-note {
-  max-width: 900px;
-  margin: 10px auto 0;
   color: var(--muted);
   font-size: 0.88rem;
-  line-height: 1.7;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .faq-section {
