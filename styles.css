@@ -187,19 +187,6 @@ h3 {
   height: auto;
 }
 
-.play-badge span {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  background: rgba(32, 37, 43, 0.66);
-  color: #ffffff;
-  font-size: 0.98rem;
-  font-weight: 900;
-  letter-spacing: 0.02em;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
-}
-
 .play-badge-hero {
   margin-top: 18px;
 }
