@@ -680,6 +680,54 @@ h3 {
   filter: drop-shadow(0 14px 22px rgba(32, 37, 43, 0.14));
 }
 
+.youtube-section {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(255, 248, 237, 0.94)),
+    var(--bg);
+  border-top: 1px solid var(--line);
+}
+
+.youtube-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(260px, 420px);
+  align-items: center;
+  gap: 34px;
+}
+
+.youtube-logo-link {
+  display: inline-flex;
+  align-items: center;
+  max-width: 220px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 14px 24px rgba(32, 37, 43, 0.08);
+}
+
+.youtube-logo-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.youtube-embed-card {
+  overflow: hidden;
+  aspect-ratio: 9 / 16;
+  max-height: 620px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #000;
+  box-shadow: var(--shadow);
+}
+
+.youtube-embed-card iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .x-section {
   background: var(--surface);
   border-top: 1px solid var(--line);
@@ -848,6 +896,7 @@ h3 {
   .hero,
   .split,
   .closing-inner,
+  .youtube-inner,
   .x-inner {
     grid-template-columns: 1fr;
   }
@@ -995,6 +1044,15 @@ h3 {
 
   .comparison-note {
     font-size: 0.78rem;
+  }
+
+  .youtube-logo-link {
+    max-width: 190px;
+  }
+
+  .youtube-embed-card {
+    width: min(100%, 320px);
+    margin-inline: auto;
   }
 
   .x-timeline-card {
