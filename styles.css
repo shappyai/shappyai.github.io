@@ -618,8 +618,9 @@ h3 {
 
 .article-body img {
   display: block;
-  width: min(100%, 420px);
+  width: auto;
   max-width: 100%;
+  max-height: min(80vh, 760px);
   height: auto;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -628,7 +629,7 @@ h3 {
 }
 
 .article-image-grid img {
-  width: min(100%, 260px);
+  max-height: min(72vh, 620px);
 }
 
 .article-body figcaption {
