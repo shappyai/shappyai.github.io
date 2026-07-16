@@ -565,10 +565,12 @@ h3 {
 }
 
 .article-body h2 {
-  margin: 42px 0 14px;
+  margin: 42px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid rgba(22, 131, 109, 0.28);
   color: var(--text);
-  font-size: clamp(1.9rem, 4vw, 2.65rem);
-  line-height: 1.25;
+  font-size: clamp(1.55rem, 3.1vw, 2.05rem);
+  line-height: 1.35;
 }
 
 .article-body h2:first-child {
@@ -1353,7 +1355,7 @@ h3 {
 
   .article-body h2 {
     margin-top: 34px;
-    font-size: clamp(1.55rem, 8vw, 2.05rem);
+    font-size: clamp(1.35rem, 6.4vw, 1.75rem);
   }
 
   .article-body h3 {
