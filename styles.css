@@ -620,7 +620,7 @@ h3 {
   display: block;
   width: auto;
   max-width: 100%;
-  max-height: min(80vh, 760px);
+  max-height: min(90vh, 760px);
   height: auto;
   border: 1px solid var(--line);
   border-radius: 8px;
