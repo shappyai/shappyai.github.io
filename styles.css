@@ -439,6 +439,20 @@ h3 {
   font-weight: 800;
 }
 
+.guide-link-text {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  margin-top: 8px;
+  padding: 8px 18px;
+  border: 1px solid var(--brand);
+  border-radius: 8px;
+  color: var(--brand-strong);
+  background: rgba(255, 255, 255, 0.82);
+}
+
 .guide-page {
   background: rgba(255, 248, 237, 0.74);
 }
