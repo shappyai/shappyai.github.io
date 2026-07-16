@@ -91,7 +91,7 @@ a {
   max-width: 1180px;
   min-height: 680px;
   margin: 0 auto;
-  padding: 68px 24px 42px;
+  padding: 14px 24px 42px;
 }
 
 .hero-copy {
@@ -1088,7 +1088,7 @@ h3 {
 
   .hero {
     min-height: 0;
-    padding-top: 44px;
+    padding-top: 14px;
   }
 
   .phone-showcase {
