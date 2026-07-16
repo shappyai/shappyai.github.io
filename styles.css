@@ -527,8 +527,8 @@ h3 {
 .article-header h1 {
   max-width: 100%;
   margin: 0;
-  font-size: clamp(2rem, 3.8vw, 3rem);
-  line-height: 1.22;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.25;
 }
 
 .article-date {
