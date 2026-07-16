@@ -596,12 +596,37 @@ h3 {
   margin: 34px 0;
 }
 
+.article-image {
+  display: grid;
+  justify-items: center;
+}
+
+.article-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+  max-width: 720px;
+  margin: 34px auto;
+}
+
+.article-image-grid .article-image {
+  margin: 0;
+}
+
 .article-body img {
   display: block;
+  width: min(100%, 420px);
   max-width: 100%;
   height: auto;
   border: 1px solid var(--line);
   border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 16px 38px rgba(32, 37, 43, 0.08);
+}
+
+.article-image-grid img {
+  width: min(100%, 260px);
 }
 
 .article-body figcaption {
@@ -1333,6 +1358,11 @@ h3 {
 
   .article-body h3 {
     margin-top: 24px;
+  }
+
+  .article-image-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
   }
 
   .faq-item {
