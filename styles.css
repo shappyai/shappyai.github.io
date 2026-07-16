@@ -629,7 +629,7 @@ h3 {
 }
 
 .article-image-grid img {
-  max-height: min(72vh, 620px);
+  max-height: min(90vh, 620px);
 }
 
 .article-body figcaption {
