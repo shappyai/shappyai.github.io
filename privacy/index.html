@@ -72,8 +72,13 @@
       </section>
       <section>
         <h2>3. 外部送信・共有先</h2>
-        <p>本アプリは、Firebase Cloud Functions、Firebase Storage、Firebase App Check / Play Integrity、Firebase Crashlytics、OpenAI API、Google Mobile Ads / AdMobを利用します。</p>
+        <p>本アプリは、Firebase Cloud Functions、Firebase Storage、Firebase App Check / Play Integrity、Firebase Crashlytics、OpenAI API、SpeechAce、RevenueCat、Google Mobile Ads / AdMobを利用します。</p>
         <p>広告表示では、Google Mobile Ads SDKが広告配信、測定、不正防止のためにデータを処理する場合があります。クラッシュ解析では、Firebase Crashlyticsがクラッシュ、ANR、非致命的エラーなどの診断情報を処理する場合があります。</p>
+        <p><strong>OpenAI API：</strong>録音音声、利用者が追加したMP3音声、文字起こし、練習スクリプトなどAI処理に必要なテキストを、音声文字起こし、AI判定、その他のAI機能の提供のために、Cloud Functions経由で送信します。</p>
+        <p><strong>SpeechAce：</strong>録音音声、練習対象テキスト、匿名化されたユーザーIDを、発音評価、流暢さ評価、AI判定の補助のために送信します。</p>
+        <p><strong>Firebase Storage / Cloud Functions：</strong>AI処理の中継として使用します。AI処理用の音声はFirebase Storageへ一時的にアップロードされ、Cloud Functionsによる処理後に削除されます。削除に失敗した一時ファイルは、定期削除処理の対象になります。</p>
+        <p><strong>RevenueCat：</strong>iOS版のサブスクリプションにおける購入状態・購読権利の管理に利用します。購入手続きはAppleのApp内課金を通じて行われます。</p>
+        <p>iOS版では、AI判定またはAI文字起こしを初めて利用する前に、第三者サービスへ送信するデータ、送信先、利用目的を説明する同意ダイアログを表示します。利用者が同意した場合に限り、第三者サービスへの送信を開始します。同意しない場合、AI判定・AI文字起こしは開始されません。同意状態は端末内に保存されます。</p>
         <p>本アプリではAI機能の提供のためにCloud Functions経由でOpenAIのAPIを利用しています。開発者がOpenAIのデータ共有設定を有効にしている場合、送信されたデータがOpenAIのサービス改善・モデル改善のために利用される場合があります。本アプリでは、個人情報や機密情報を含む音声・テキストは送信しないことを推奨します。</p>
       </section>
       <section>
@@ -83,7 +88,7 @@
       </section>
       <section>
         <h2>5. クラウド保存・ログイン・課金</h2>
-        <p>Ver1では、ログイン、課金、クラウド保存、端末間同期は提供しません。ただし、AI処理のための一時アップロード、広告配信、クラッシュ解析、不正利用対策のために外部サービスへデータが送信されることがあります。</p>
+        <p>本アプリでは、ログイン機能、ユーザー教材の恒久的なクラウド保存、端末間同期は提供していません。AI処理のための音声の一時アップロード、広告配信、クラッシュ解析、不正利用対策のために外部サービスへデータを送信する場合があります。iOS版ではAppleのApp内課金（In-App Purchase）を利用したサブスクリプションを提供し、サブスクリプションの購入状態・購読権利の管理にRevenueCatを利用します。</p>
       </section>
       <section>
         <h2>6. 広告と同意</h2>
