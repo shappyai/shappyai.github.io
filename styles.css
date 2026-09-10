@@ -193,8 +193,15 @@ h3 {
 
 .play-badge-row {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
+  gap: 12px;
   margin-top: 18px;
+}
+
+.app-store-badge {
+  width: min(174px, 100%);
 }
 
 .play-badge-closing {
